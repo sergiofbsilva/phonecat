@@ -6,37 +6,67 @@
  * To change this template use File | Settings | File Templates.
  */
 require.config({
+    baseUrl: 'scripts/',
     paths:{
-        angular: '/components/angular/angular.min',
-        jquery: '/components/jquery',
-        domReady: '/components/domready/ready.min',
-        angularResource: '/components/angular-resource/angular-resource.min'
+        angular: 'components/angular/angular.min',
+        jquery: 'components/jquery/jquery.min',
+        twitterBootstrap: 'components/bootstrap/docs/assets/js/bootstrap.min',
+        domReady: 'components/domready/ready.min',
+        angularResource: 'components/angular-resource/angular-resource.min',
+        properties: 'conf/properties',
+        config: 'conf/Config'
     },
     shim: {
         angular: {
-            deps: ['jquery/jquery'],
+            deps: ['jquery'],
             exports: 'angular'
         },
         angularResource: {
             deps:['angular']
+        },
+        twitterBootstrap:{
+            deps:['jquery']
         }
     }
 });
 
 require([
         'angular',
+        'angularResource',
         'app',
         'domReady',
-        'controllers/mainController',
+        'twitterBootstrap',
+        'properties',
+        'config',
+        'services/configurationService',
+        'services/phoneService',
+        'controllers/phoneController',
+        'filters/checkMarkFilter',
         'directives/mydirective'
+
     ],
-    function(angular, app, domReady){
+    function(angular, angularResource, app, domReady){
         'use strict';
-        app.config(['$routeProvider',
-            function($routeProvider){
+        app.config(['$routeProvider', '$locationProvider',
+            function($routeProvider, $locationProvider){
+
                 $routeProvider.when('/', {
-                    templateUrl: 'views/main.html',
-                    controller: 'MainCtrl'
+                    controller: 'PhoneCtrl',
+                    resolve:{
+                        phones: function(PhoneListLoader){
+                          return PhoneListLoader();
+                        }
+                    },
+                    templateUrl: 'views/phone-list.html'
+                });
+                $routeProvider.when('/phone/:id',{
+                    controller: 'ShowPhoneCtrl',
+                    resolve:{
+                        phone: function(PhoneLoader){
+                            return PhoneLoader();
+                        }
+                    },
+                    templateUrl: 'views/phone-detail.html'
                 });
             }
 
