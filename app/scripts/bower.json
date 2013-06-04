@@ -7,6 +7,7 @@
     "domready": "latest",
     "requirejs": "~2.1.6",
     "angular-resource": "~1.0.7",
-    "bootstrap": "~2.3.2"
+    "bootstrap": "~2.3.2",
+    "angular-unstable": "~1.1.5"
   }
 }

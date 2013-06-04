@@ -8,7 +8,7 @@
 require.config({
     baseUrl: 'scripts/',
     paths:{
-        angular: 'components/angular/angular.min',
+        angular: 'components/angular-unstable/angular.min',
         jquery: 'components/jquery/jquery.min',
         twitterBootstrap: 'components/bootstrap/docs/assets/js/bootstrap.min',
         domReady: 'components/domready/ready.min',
