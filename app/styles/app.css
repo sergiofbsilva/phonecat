@@ -116,3 +116,8 @@ h1 {
     opacity: 1;
     height: 30px;
 }
+
+/* overiding  bootstrap with custome style */
+.navbar .brand {
+    color: lightgray;
+}
