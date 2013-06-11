@@ -20,7 +20,8 @@ define(['controllers/controllers'],
         }]);
 
         /* Fetch all phones */
-        controllers.controller('PhoneCtrl',['$scope', 'phones', function($scope, phones){
+        controllers.controller('PhoneCtrl',['$scope', 'phones',function($scope, phones){
+            console.log("In controller");
             $scope.phones = phones;
         }]);
 

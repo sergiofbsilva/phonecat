@@ -38,7 +38,6 @@ require([
         'twitterBootstrap',
         'properties',
         'config',
-        'services/configurationService',
         'services/phoneService',
         'controllers/phoneController',
         'filters/checkMarkFilter',
@@ -54,6 +53,7 @@ require([
                     controller: 'PhoneCtrl',
                     resolve:{
                         phones: function(PhoneListLoader){
+                          console.log("called from test");
                           return PhoneListLoader();
                         }
                     },
