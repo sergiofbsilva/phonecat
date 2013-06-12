@@ -9,8 +9,8 @@
             b. Grunt - used to build, preview and test your project
             c. Bower - used for dependency management to download and manage api/scripts
 
-## Application Structure
-    ## Directory Layout
+
+## Directory Layout
 
         app/                        --> all of the files to be used in production
           styles/                   --> css files
