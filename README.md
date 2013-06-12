@@ -5,9 +5,9 @@
             applications which leads to very high productivity.
 * RequireJS - RequireJS is a JavaScript file and module loader.
 * Yeoman    - Comprises of three tools
-    ** Yo    - for scaffolding application structure
-    ** Grunt - used to build, preview and test your project
-    ** Bower - used for dependency management to download and manage api/scripts
+    * Yo    - for scaffolding application structure
+    * Grunt - used to build, preview and test your project
+    * Bower - used for dependency management to download and manage api/scripts
 
 ## Directory Layout
 
