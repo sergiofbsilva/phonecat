@@ -11,17 +11,14 @@
 define(['angularMocks', 'services/services', 'controllers/controllers', 'controllers/phoneController',
         'services/phoneService'],
     function(){
-
-
-
             describe('PhoneCtrl', function(){
                 beforeEach(module('services'));
                 beforeEach(module('controllers'));
 
-                var controller, $httpBackend, scope, phones, $rootScope, loader,
+                var controller, $httpBackend, scope, phones, $rootScope,
                     mockPhoneData = function(){
                         this.$get = function() {
-                            return function (name) {
+                            return function () {
                                 return [{
                                     "_id" : "51a8864504a628aaa67ee052" ,
                                     "age" : 2 ,
@@ -51,7 +48,5 @@ define(['angularMocks', 'services/services', 'controllers/controllers', 'control
                     expect(scope.phones.length).toBe(1);
 
                 });
-
             });
-
     });

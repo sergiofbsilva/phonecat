@@ -53,7 +53,6 @@ require([
                     controller: 'PhoneCtrl',
                     resolve:{
                         phones: function(PhoneListLoader){
-                          console.log("called from test");
                           return PhoneListLoader();
                         }
                     },
