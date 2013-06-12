@@ -1,4 +1,4 @@
-# Phonecat - App demonstrating the use of with AngularJS + RequireJS + Yeoman
+# App demonstrating the use of with AngularJS + RequireJS + Yeoman
 
 * AngularJS - Angular.js is an open-source Javascript MVC (Model-View-Controller) framework developed by
             Google. It gives Javascript developers a highly structured approach to developing rich browser-based
