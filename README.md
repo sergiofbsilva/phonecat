@@ -1,13 +1,13 @@
 # Phonecat - App demonstrating the use of with AngularJS + RequireJS + Yeoman
 
-    * AngularJS - Angular.js is an open-source Javascript MVC (Model-View-Controller) framework developed by
-                Google. It gives Javascript developers a highly structured approach to developing rich browser-based
-                applications which leads to very high productivity.
-    * RequireJS - RequireJS is a JavaScript file and module loader.
-    * Yeoman    - Comprises of three tools
-                a. Yo    - for scaffolding application structure
-                b. Grunt - used to build, preview and test your project
-                c. Bower - used for dependency management to download and manage api/scripts
+* AngularJS - Angular.js is an open-source Javascript MVC (Model-View-Controller) framework developed by
+            Google. It gives Javascript developers a highly structured approach to developing rich browser-based
+            applications which leads to very high productivity.
+* RequireJS - RequireJS is a JavaScript file and module loader.
+* Yeoman    - Comprises of three tools
+            a. Yo    - for scaffolding application structure
+            b. Grunt - used to build, preview and test your project
+            c. Bower - used for dependency management to download and manage api/scripts
 
 ## Application Structure
     ## Directory Layout
