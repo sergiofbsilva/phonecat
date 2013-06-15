@@ -39,6 +39,7 @@ require([
         'properties',
         'config',
         'services/phoneService',
+        'controllers/loginController',
         'controllers/phoneController',
         'filters/checkMarkFilter',
         'directives/mydirective'
@@ -67,12 +68,28 @@ require([
                     },
                     templateUrl: 'views/phone-detail.html'
                 });
+                $routeProvider.when('/login',{
+                    controller: 'LoginCtrl',
+                    templateUrl: 'views/login-form.html'
+                });
             }
 
-        ]);
+        ]).run(function($rootScope, $location){
+                $rootScope.$on('$routeChangeStart', function(event, next, current){
+                    if($rootScope.loggedInUser == null){
+                        console.log('No user found');
+                        if(next.templateUrl == 'views/login-form.html'){
+                             console.log('redirect to login form');
+                        }else {
+                            $location.path('/login');
+                        }
+                    }
+
+                });
+
+            });
         domReady(function() {
             angular.bootstrap(document, ['phonecatApp']);
-
             // The following is required if you want AngularJS Scenario tests to work
             $('html').addClass('ng-app: phonecatApp');
         });
