@@ -53,5 +53,7 @@
           spec/                     --> unit level specs/tests
             controllers/            --> unit test jasmine specs for controllers
               phoneControllerSpec.js
+          e2e/                      --> end-to-end tests
+              phoneListSpec.js
         karma.conf.js               --> config file for running unit tests with Karma
         karma-e2e.conf.js           --> config file for running e2e tests with Karma
