@@ -5,7 +5,7 @@ basePath = '';
 
 // list of files / patterns to load in the browser
 files = [
-  ANGULAR_SCENARIO,
+  'app/scripts/components/angular-scenario/angular-scenario.js',
   ANGULAR_SCENARIO_ADAPTER,
   'test/e2e/**/*.js'
 ];
@@ -18,7 +18,7 @@ exclude = [];
 reporters = ['progress'];
 
 // web server port
-port = 8080;
+port = 8989;
 
 // cli runner port
 runnerPort = 9100;
@@ -41,11 +41,21 @@ autoWatch = false;
 // - Safari (only Mac)
 // - PhantomJS
 // - IE (only Windows)
+
+urlRoot = '/_karma_/';
+
+proxies = {
+    '/': 'http://localhost:9000/'
+};
+
 browsers = ['Chrome'];
 
+
+
 // If browser does not capture in given timeout [ms], kill it
-captureTimeout = 5000;
+captureTimeout = 60000;
 
 // Continuous Integration mode
 // if true, it capture browsers, run tests and exit
 singleRun = false;
+

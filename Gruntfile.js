@@ -102,6 +102,10 @@ module.exports = function (grunt) {
       unit: {
         configFile: 'karma.conf.js',
         singleRun: true
+      },
+      e2e: {
+        configFile: 'karma-e2e.conf.js',
+        singleRun: true
       }
     },
     coffee: {
@@ -272,12 +276,21 @@ module.exports = function (grunt) {
     'watch'
   ]);
 
-  grunt.registerTask('test', [
+  grunt.registerTask('test:unit', [
     'clean:server',
     'coffee',
     'compass',
     'connect:test',
-    'karma'
+    'karma:unit'
+  ]);
+
+  grunt.registerTask('test:e2e', [
+    'clean:server',
+    'coffee',
+    'compass',
+    'livereload-start',
+    'connect:livereload',
+    'karma:e2e'
   ]);
 
   grunt.registerTask('build', [
