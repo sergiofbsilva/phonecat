@@ -38,6 +38,13 @@ describe('phoneList e2e Test', function() {
 
     });
 
+    it('should render phone specific links', function(){
+        input('query').enter('Dell Streak');
+        sleep(2);
+        element('.phones li a').click();
+        expect(browser().location().url()).toBe('/phone/51a8864504a628aaa67ee057');
+    });
+
     it('should be able to expect no phones on wrong url', function(){
         browser().navigateTo('/nophones');
         sleep(1);
