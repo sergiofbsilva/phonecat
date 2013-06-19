@@ -9,7 +9,7 @@
 'use strict';
 
 define(['config', 'properties'], function(config, properties){
-    switch(properties.defaultEnvironment){
+    switch(properties.environment){
         case 'development':
             properties.restUrl = properties.development.dataSource.baseUrl +
                                 properties.development.dataSource.database;

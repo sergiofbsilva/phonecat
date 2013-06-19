@@ -23,6 +23,6 @@ define(['properties'], function(){
                 apiKey: 'apjU5hDugbRgLKeitWJT-PPTLsVuwwlW'
             }
         },
-        defaultEnvironment: 'development'
+        environment: 'development'
     };
 });
