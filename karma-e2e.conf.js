@@ -52,7 +52,7 @@ proxies = {
     '/': 'http://localhost:9000/'
 };
 
-browsers = ['Chrome'];
+browsers = ['PhantomJS'];
 
 
 
@@ -61,5 +61,5 @@ captureTimeout = 60000;
 
 // Continuous Integration mode
 // if true, it capture browsers, run tests and exit
-singleRun = false;
+singleRun = true;
 

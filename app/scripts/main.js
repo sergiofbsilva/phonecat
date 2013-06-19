@@ -78,11 +78,11 @@ require([
                 $rootScope.$on('$routeChangeStart', function(event, next, current){
                     if($rootScope.loggedInUser == null){
                         console.log('No user found');
-                        if(next.templateUrl == 'views/login-form.html'){
+                        /*if(next.templateUrl == 'views/login-form.html'){
                              console.log('redirect to login form');
                         }else {
                             $location.path('/login');
-                        }
+                        }*/
                     }
 
                 });
